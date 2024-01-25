@@ -1,0 +1,27 @@
+.filterContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  width: 300px;
+  height: max-content;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 32px;
+  background-color: #FFF;
+  .type, .capacity, .price {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .titleFilter {
+      text-transform: uppercase;
+      color: #90A3BF;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 3px;
+    }
+    .radioForm {
+      display: flex;
+      gap: 10px;
+    }
+  }
+}

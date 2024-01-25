@@ -1,0 +1,305 @@
+.paymentContainer {
+  background-color: #F6F7F9;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    .payment {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      .billInfo, .rentalInfo, .paymentMethod, .confirmation {
+        width: 800px;
+        background-color: #FFF;
+        padding: 24px;
+        border-radius: 10px;
+        .title {
+          display: flex;
+          justify-content: space-between;
+          align-items: end;
+          h2 {
+            display: flex;
+            flex-direction: column;
+            color: #1F2544;
+            span {
+              color: #90A3BF;
+              font-size: 14px;
+              font-weight: 500;
+            }
+          }
+          p {
+            color: #90A3BF;
+            font-size: 14px;
+            font-weight: 500;
+          }
+        }
+      }
+      .billInfo, .rentalInfo {
+        .form {
+          margin-top: 32px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+          gap: 32px;
+          .inputForm {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            input {
+              padding: 16px 32px;
+              background-color: #F6F7F9;
+              border-radius: 10px;
+              border: 0;
+              &:focus {
+                outline: none;
+              }
+            }
+          }
+        }
+        .pickUp, .dropOff {
+          margin-top: 30px;
+          h3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+        }
+      }
+      .paymentMethod {
+        .method {
+          margin-top: 32px;
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          .visaMethod, .paypalMethod, .bitcoinMethod {
+            background-color: #F6F7F9;
+            border-radius: 10px;
+            padding: 26px 24px;
+            .titleMethod {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              .radioMethod {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                input {
+                  width: 16px;
+                  height: 16px;
+                }
+              }
+            }
+            .formMethod {
+              margin-top: 32px;
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              grid-template-rows: 1fr 1fr;
+              gap: 32px;
+              display: none;
+              .inputForm {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                input {
+                  padding: 16px 32px;
+                  background-color: #FFF;
+                  border-radius: 10px;
+                  border: 0;
+                  &:focus {
+                    outline: none;
+                  }
+                }
+              }
+              &.showForm {
+                display: grid;
+              }
+            }
+          }
+        }
+      }
+      .confirmation {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        .form {
+          display: flex;
+          align-items: center;
+          gap: 25px;
+          border-radius: 10px;
+          background-color: #F6F7F9;
+          padding: 16px 32px;
+          color: #1F2544;
+          input {
+            width: 24px;
+            height: 24px;
+          }
+          &:last-child {
+            margin-top: 24px;
+          }
+        }
+        .btnRentNow {
+          background-color: #3563E9;
+          color: #FFF;
+          font-size: 16px;
+          font-weight: 700;
+          width: 140px;
+          height: 56px;
+          border: 0;
+          border-radius: 10px;
+          cursor: pointer;
+        }
+        .bottomContent {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          p {
+            color: #90A3BF;
+            font-size: 14px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+    .rentalSummary {
+      width: 492px;
+      height: max-content;
+      border-radius: 10px;
+      background-color: #FFF;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      .title {
+        p {
+          margin-top: 5px;
+          color: #90A3BF;
+        }
+      }
+      .imageContainer {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        .imageCar {
+          padding: 5px;
+          // background-color: #3563E9;
+          background-color: #F5F5F5;
+          width: 180px;
+          height: 180px;
+          object-fit: contain;
+          border-radius: 5px;
+        }
+      }
+      .price {
+        padding-top: 30px;
+        border-top: 1px solid rgba(195, 212, 233, 0.40);
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        .subtotal, .tax {
+          display: flex;
+          justify-content: space-between;
+          p:first-child {
+            color: #90A3BF;
+          }
+          p:last-child {
+            color: #1A202C;
+            font-weight: 800;
+          }
+        }
+        .promoCode {
+          border-radius: 10px;
+          background-color: #F6F7F9;
+          display: flex;
+          justify-content: space-between;
+          padding: 16px 32px;
+          input {
+            border: 0;
+            background-color: transparent;
+            font-size: 16px;
+            &:focus {
+              outline: none;
+            }
+          }
+          button {
+            background-color: transparent;
+            border: 0;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+          }
+        }
+        .totalPrice {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          h4 {
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            span {
+              color: #90A3BF;
+              font-size: 14px;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:480px) {
+  .paymentContainer{
+    .container {
+      flex-direction: column-reverse;
+      gap: 32px;
+      .payment {
+        .billInfo, .rentalInfo, .paymentMethod, .confirmation {
+          width: 100%;
+        }
+        .billInfo, .rentalInfo {
+          .form {
+            grid-template-columns: 1fr;
+          }
+        }
+        .paymentMethod {
+          .method {
+            .visaMethod, .paypalMethod, .bitcoinMethod {
+              .formMethod {
+                grid-template-columns: 1fr;
+              }
+            }
+          }
+        }
+      }
+      .rentalSummary {
+        width: 100%;
+        .imageContainer {
+          gap: 20px;
+          .imageCar {
+            width: 150px;
+            height: 80px;
+          }
+          h1 {
+            font-size: 20px;
+          }
+        }
+        .price {
+          .promoCode {
+            padding: 10px 20px;
+            input {
+              font-size: 12px;
+            }
+            button {
+              font-size: 12px;
+            }
+          }
+          .totalPrice {
+            h4 {
+              width: 150px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

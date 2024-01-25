@@ -1,0 +1,102 @@
+.navBar {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .leftContent {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      .logo {
+        color: #3563E9;
+        text-decoration: none;
+        font-size: 32px;
+        font-weight: 700;
+      }
+      .searchContainer {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        border: 1px solid rgba(195, 212, 233, 0.40);
+        border-radius: 70px;
+        padding: 10px 20px;
+        input {
+          border: 0;
+          width: 300px;
+          &:focus {
+            outline: none;
+          }
+        }
+        .filter {
+          cursor: pointer;
+        }
+      }
+    }
+    .rightContent {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      button {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background-color: #FFFFFF;
+        border: 1px solid rgba(195, 212, 233, 0.40);
+        border-radius: 90px;
+        cursor: pointer;
+        &:hover {
+          background-color: rgba(195, 212, 233, 0.40);
+        }
+      }
+    }
+  }
+  .searchMobile {
+    padding-bottom: 40px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    .inputContainer {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid rgba(195, 212, 233, 0.40);
+      border-radius: 10px;
+      padding: 12px 24px;
+      input {
+        border: 0;
+        width: 50vw;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    .filter {
+      display: flex;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(195, 212, 233, 0.40);
+    }
+  }
+}
+
+@media (max-width:480px) {
+  .navBar {
+    .container {
+      padding: 32px 24px;
+      .leftContent {
+        .searchContainer {
+          display: none;
+        }
+      }
+      .rightContent {
+        .btnHeart, .btnNoti, .btnSetting {
+          display: none;
+        }
+      }
+    }
+    .searchMobile {
+      display: flex;
+    }
+  }
+}
